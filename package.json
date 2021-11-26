@@ -12,15 +12,17 @@
     "@types/react-dom": "^17.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
+    "react-router-dom": "^6.0.2",
+    "react-scripts": "^3.4.4",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "webpack serve",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +41,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.16.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^10.2.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.2",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
   }
 }
