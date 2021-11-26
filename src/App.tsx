@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ThemeContext, Theme } from "./core/context/ThemeProvider";
+import RouteProvider from "./routes/routes";
+import "./assets/sass/main.scss";
 
-function App() {
+const App: React.FC<{}> = () => {
+  const [theme, setTheme] = React.useState(Theme.Dark);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        <RouteProvider />
+      </ThemeContext.Provider>
     </div>
   );
-}
+};
 
 export default App;
