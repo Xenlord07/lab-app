@@ -1,0 +1,26 @@
+/** Base imports */
+@import "./base/reset";
+@import "./base/typography";
+
+/** Component imports */
+@import "./components/test";
+
+/** Layout imports*/
+@import "./layout/header";
+@import "./layout/footer";
+
+/** Pages imports */
+@import "./pages/home";
+
+/** Themes imports */
+@import "./themes/theme";
+@import "./themes/contact";
+
+/** Utils imports */
+@import "./utils/functions";
+@import "./utils/helpers";
+@import "./utils/mixins";
+@import "./utils/variables";
+
+/** Vendor imports */
+@import "./vendors/bootstrap?";
